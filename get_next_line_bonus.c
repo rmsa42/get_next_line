@@ -6,7 +6,7 @@
 /*   By: rumachad <rumachad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 10:46:13 by rumachad          #+#    #+#             */
-/*   Updated: 2023/05/17 12:06:11 by rumachad         ###   ########.fr       */
+/*   Updated: 2023/09/21 16:43:58 by rumachad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,7 +102,6 @@ char	*get_next_line(int fd)
 		return (NULL);
 	else
 	{
-		printf("%i\n", fd);
 		nw_line[fd] = readed(nw_line[fd], fd);
 		if (nw_line[fd] == NULL)
 			return (NULL);
@@ -114,34 +113,3 @@ char	*get_next_line(int fd)
 		}
 	}
 }
-
-/* int main()
-{
-	int		change;
-	int		i = 0;
-	int		fd;
-	int		fd2;
-	char	*a;
-
-	fd = open ("/nfs/homes/rumachad/42Curso/get_next_line/test.txt", O_RDWR);
-	fd2 = open ("/nfs/homes/rumachad/42Curso/get_next_line/test2.txt", O_RDWR);
-	change = fd;
-	while (i < 9)
-	{
-		if (change == fd)
-		{
-			a = get_next_line(change);
-			printf("%s", a);
-			free(a);
-			change = fd2;
-		}
-		else
-		{
-			a = get_next_line(change);
-			printf("%s", a);
-			free(a);
-			change = fd;
-		}
-		i++;
-	}
-} */
