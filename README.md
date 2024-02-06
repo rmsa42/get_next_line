@@ -65,13 +65,13 @@ If you want to define yourself the BUFFER_SIZE you need to compile the program w
 int main()
 {
 	char *line;
-  int i = 0;
+	int i = 0;
 	while (i < 2)
 	{
 		line = get_next_line(0);
 		printf("get_next_line:%s\n", line);
 		free(line);
-    i++;
+		i++;
 	}
 }
 ```
